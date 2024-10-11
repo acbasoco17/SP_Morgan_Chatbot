@@ -84,14 +84,11 @@ function App() {
 
   return (
       <div className="App">
-        <div style={{position: "absolute", height: "100%", width: "100%"}}>
+        <div style={{position: "absolute", width: "100%", height: "100%" }}>
           
-          <ConversationHeader style={{position: "sticky"}}>
+          <ConversationHeader>
             <Avatar name='Morgan Chatbot' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mascotdb.com%2Fsites%2Fdefault%2Ffiles%2Flogos%2F40577.jpg&f=1&nofb=1&ipt=a3b77ebdd67e4e43746d7fa2ac7e09fdf98ad75e4719dff2e71ddf77aecc1b3a&ipo=images'/>
-            <ConversationHeader.Content userName="Morgan Chatbot"/>
-            <ConversationHeader.Actions>
-              <VoiceCallButton title="Call Morgan's Computer Science Department"/>
-            </ConversationHeader.Actions>
+            <ConversationHeader.Content userName="Ask Benny Chat"/>
           </ConversationHeader>
 
           <MainContainer>
@@ -99,7 +96,7 @@ function App() {
               <MessageList 
               scrollBehavior='smooth'
               style={{backgroundColor: "#ea8556"}}
-              typingIndicator={isTyping ? <TypingIndicator content="Morgan's Chatbot is typing"/>: null}
+              typingIndicator={isTyping ? <TypingIndicator content="Benny is typing"/>: null}
               >
                 {messages.map((messages , i) => {
                   return <Message key={i} model={messages} />
