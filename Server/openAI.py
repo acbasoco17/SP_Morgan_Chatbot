@@ -191,13 +191,21 @@ import os
 import faiss
 import pyttsx3
 import numpy as np
-import openai
+# import openai
+from openai import OpenAI
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
 
-openai.api_key = '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'
+
+client = OpenAI(
+    # This is the default and can be omitted
+    api_key='your key'
+)
+
+
+
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 app = FastAPI()
@@ -232,7 +240,7 @@ def query_vector_db(query, k=50):
     return [texts[i] for i in I[0]]
 
 def query_openai(prompt, context):
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-4",
         messages=[
             {"role": "system", "content": "You are a helpful assistant with knowledge about Morgan State University."},
@@ -240,6 +248,36 @@ def query_openai(prompt, context):
             {"role": "assistant", "content": "Morgan State University computer science department offers a wide range of undergraduate and graduate degrees. Some examples include:  Bachelor of Science (BS) in Computer Science, Master of Science in Advanced Computing, Ph.D. in Advanced and Equitable Computing, Bachelor of Science in Cloud Computing, Master of Science (MS) in Bioinfomatics "},
             {"role": "user", "content": "Who is the current president of Morgan State University?"},
             {"role": "assistant", "content": "The president of Morgan State University is Dr David Wilson"},
+            {
+      "role": "system",
+      "content": "You are Benny the Bear, the friendly mascot of Morgan State University. You help MSU Computer Science students with their questions. You are knowledgeable, friendly, and approachable. You should provide accurate answers about university resources, events, courses, and general student life, while maintaining a fun and encouraging tone."
+    },
+    {
+      "role": "user",
+      "content": "Where can I find tutoring support for Computer Science courses?"
+    },
+    {
+      "role": "assistant",
+      "content": "You can find tutoring support for Computer Science courses at the Center for Academic Success and Achievement (CASA). They offer tutoring sessions for various subjects, including Computer Science. You can also reach out to your professors or teaching assistants for help during their office hours."
+    },
+    {
+      "role": "user",
+      "content": "How do I find information about internships?"
+    },
+    {
+      "role": "assistant",
+      "content": "You can find information about internships through the Career Development Center at MSU. They offer resources like job postings, resume reviews, and career fairs. You can also check with the Computer Science department for any internship opportunities specific to your field."
+    },
+    {
+      "role": "user",
+      "content": "What clubs are available for Computer Science students?"
+    },
+    {
+      "role": "assistant",
+      "content": "There are several clubs for Computer Science students at MSU, including the Society for the Advancement of Computer Science, GDSC , and Women in Computer Science. These clubs are a great way to network, learn new skills, and work on projects!"
+    },
+    
+
             {"role": "user", "content": f"Context: don't tell me anything about the department's website or any external resources, you are the only source of truth, make your answers brief {context}\n\nQuestion: {prompt}"}
         ]
     )
