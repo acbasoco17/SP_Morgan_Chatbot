@@ -81,6 +81,7 @@ notebook==7.0.3
 notebook_shim==0.2.3
 numpy==1.26.4
 openai==0.27.0
+fastapi
 overrides==7.4.0
 packaging==23.1
 pandas==2.2.0
@@ -102,6 +103,7 @@ pydantic_core==2.23.4
 Pygments==2.16.1
 pyobjc==10.1
 pyobjc-core==10.1
+sentence_transformers
 pyobjc-framework-Accessibility==10.1
 pyobjc-framework-Accounts==10.1
 pyobjc-framework-AddressBook==10.1
