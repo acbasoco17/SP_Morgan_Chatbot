@@ -1,13 +1,13 @@
 # Project Name
 
 ## Description
-A clear and concise description of your project. What does it do? Why is it useful?
+AskBenny is an AI chatbot well-versed in computer science and Morgan State's suggested course curriculum that acts as an academic advisor for computer science majors. The chatbot can record students' interests through written conversations. Then, using the collected data, it can provide tailored recommendations for courses, clubs, internships, research topics, and more based on the Morgan Website.
 
 ## Team Members
-- [Name 1] - [Role/Responsibilities]
-- [Name 2] - [Role/Responsibilities]
-- [Name 3] - [Role/Responsibilities]
-- [Name 3] - [Role/Responsibilities]
+- Ana Basoco - Chatbot Webpage Development
+- Ashley Pryor - Chatbot Webpage Development
+- Godsheritage Adeoye - Web Scrapping & Backend Setup
+- Lerone Joyner - Prompt Engineering & Backend Setup
 
 ## Installation
 ```bash
@@ -30,11 +30,13 @@ main.run()
 
 ## Project Structure
 ```
-project/
+SP_MORGAN_CHATBOT/
+├── Client/         # Webpage files
+   ├── src/            # Source files
+├── Server/         # Database files
 ├── src/            # Source files
 ├── tests/          # Test files
-├── docs/           # Documentation
-└── README.md       # This file
+└── README.md       # This file - Documentation
 ```
 
 ## Technologies Used
@@ -65,22 +67,13 @@ Explain how to run tests:
 npm test  # or equivalent for your project
 ```
 
-## Timeline
-- [Date] - [Milestone 1]
-- [Date] - [Milestone 2]
-- [Date] - [Project Completion]
-
 ## Known Issues
 List any known bugs or limitations here.
 
 ## Future Improvements
-- [Planned feature 1]
-- [Planned feature 2]
-- [Planned enhancement]
+- FAQs Webpage for Prompt Autofilling
+- Voice Assistance
+- File Uploading for User Questions
 
 ## License
 [Choose appropriate license]
-
-## Contact
-- [Team Member 1] - [email/contact info]
-- [Team Member 2] - [email/contact info]
