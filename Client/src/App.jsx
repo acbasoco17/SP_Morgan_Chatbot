@@ -145,26 +145,26 @@ function App() {
   // }
 
   return (
-    <div className="App">
-      <div style={{ position: "absolute", width: "100%", height: "100%" }}>
-        <ConversationHeader>
-          <Avatar
-            name="Morgan Chatbot"
-            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mascotdb.com%2Fsites%2Fdefault%2Ffiles%2Flogos%2F40577.jpg&f=1&nofb=1&ipt=a3b77ebdd67e4e43746d7fa2ac7e09fdf98ad75e4719dff2e71ddf77aecc1b3a&ipo=images"
-          />
-          <ConversationHeader.Content userName="Ask Benny Chat" />
+    <div className="App" style={{ marginTop: "-30px", marginLeft: "-100px", marginRight: "-120px", marginBottom: "-30px" }}>
+      <div>
+        <ConversationHeader style={{ backgroundColor: "#064684" }}>
+          <ConversationHeader.Content>
+            <span style={{color: "white"}}><h2>Ask Benny Chat</h2></span>
+          </ConversationHeader.Content>
         </ConversationHeader>
 
         <MainContainer>
-          <ChatContainer className="my-container">
+          <ChatContainer style={{ width: "2100px", height: "730px", marginTop: "10px" }}>
             <MessageList
               scrollBehavior="smooth"
-              style={{ backgroundColor: "#ea8556" }}
               typingIndicator={
                 isTyping ? <TypingIndicator content="Benny is typing" /> : null
               }
             >
               {messages.map((messages, i) => {
+                if (messages.sender == "ChatGPT") {
+                  return <Message key={i} model={messages} children={<Avatar src={"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mascotdb.com%2Fsites%2Fdefault%2Ffiles%2Flogos%2F40577.jpg&f=1&nofb=1&ipt=a3b77ebdd67e4e43746d7fa2ac7e09fdf98ad75e4719dff2e71ddf77aecc1b3a&ipo=images"} name="Benny" />} />;
+                }
                 return <Message key={i} model={messages} />;
               })}
             </MessageList>
