@@ -15,8 +15,7 @@ import {
   VoiceCallButton,
 } from "@chatscope/chat-ui-kit-react";
 
-const API_KEY =
-  "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";
+const API_KEY = "Your API_KEY here";
 
 function App() {
   const [isTyping, setIsTyping] = useState(false);
