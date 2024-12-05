@@ -14,6 +14,7 @@ AskBenny is an AI chatbot well-versed in computer science and Morgan State's sug
 ```bash
 # Step-by-step installation instructions
 git clone [repository-url]
+# Add your api key to the openAI.py file.
 npm install   # or equivalent for your project
 pip install -r requirements.txt
 python3 openai.py
@@ -55,7 +56,7 @@ SP_MORGAN_CHATBOT/
    ├── morgan_edu_data.json  
    ├── morgan_edu_data2.csv
    ├── morgan_edu_texts.npy
-   ├── openAI.py    # Takes user input and returns 
+   ├── openAI.py    # Takes user input and returns (Add your api key here)
    ├── pyvenv.cfg
    ├── scrapper.py
    ├── terminal_voice_chatbot.py
