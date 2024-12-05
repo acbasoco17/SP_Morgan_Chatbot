@@ -13,6 +13,9 @@ AskBenny is an AI chatbot well-versed in computer science and Morgan State's sug
 ```bash
 # Step-by-step installation instructions
 npm install   # or equivalent for your project
+pip install -r requirements.txt
+python3 openai.py
+node run dev # run this in a seperate terminal from openai.py
 ```
 
 ## Usage
