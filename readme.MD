@@ -1,4 +1,4 @@
-# Project Name
+# Ask Benny (Morgan Computer Science Chatbot)
 
 ## Description
 AskBenny is an AI chatbot well-versed in computer science and Morgan State's suggested course curriculum that acts as an academic advisor for computer science majors. The chatbot can record students' interests through written conversations. Then, using the collected data, it can provide tailored recommendations for courses, clubs, internships, research topics, and more based on the Morgan Website.
