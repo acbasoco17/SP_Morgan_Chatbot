@@ -11,12 +11,9 @@ AskBenny is an AI chatbot well-versed in computer science and Morgan State's sug
 
 ## Installation
 (Only works on MacOS)
-Clone the repository
-```bash
-git clone [repository-url]
-```
 ```bash
 # Step-by-step installation instructions
+git clone [repository-url]
 npm install   # or equivalent for your project
 pip install -r requirements.txt
 python3 openai.py
