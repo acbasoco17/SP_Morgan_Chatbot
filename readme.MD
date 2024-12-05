@@ -10,6 +10,7 @@ AskBenny is an AI chatbot well-versed in computer science and Morgan State's sug
 - Lerone Joyner - Prompt Engineering & Backend Setup
 
 ## Installation
+(Only works on MacOS)
 ```bash
 # Step-by-step installation instructions
 npm install   # or equivalent for your project
