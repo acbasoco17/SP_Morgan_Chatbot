@@ -84,12 +84,10 @@ npm test  # or equivalent for your project
 ```
 
 ## Known Issues
-List any known bugs or limitations here.
+Can't currently add new data through the user interface. The only way to manipulate the chatbot data is
+through the backend file morgan_edu_data.csv.
 
 ## Future Improvements
 - FAQs Webpage for Prompt Autofilling
 - Voice Assistance
 - File Uploading for User Questions
-
-## License
-[Choose appropriate license]
