@@ -11,6 +11,10 @@ AskBenny is an AI chatbot well-versed in computer science and Morgan State's sug
 
 ## Installation
 (Only works on MacOS)
+Clone the repository
+```bash
+git clone [repository-url]
+```
 ```bash
 # Step-by-step installation instructions
 npm install   # or equivalent for your project
@@ -48,15 +52,6 @@ SP_MORGAN_CHATBOT/
 - Framework(s):
 - Database:
 - Other tools:
-
-## Setup Development Environment
-1. Clone the repository
-   ```bash
-   git clone [repository-url]
-   ```
-2. Install dependencies
-3. Configure environment variables
-4. [Additional steps...]
 
 ## Contributing
 1. Fork the project
