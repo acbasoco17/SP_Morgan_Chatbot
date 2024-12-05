@@ -37,18 +37,38 @@ main.run()
 ```
 SP_MORGAN_CHATBOT/
 ├── Client/         # Webpage files
+   ├── node_module/    # Will appear on npm install (in installation step)
+   ├── public/         # Will appear automatically 
+      ├── vite.svg     
    ├── src/            # Source files
+      ├── assets/
+         ├── react.svg  
+      ├── App.css      # Style sheet   
+      ├── App.jsx      # Main frontend functionality  
+      ├── index.css  
+      ├── main.jsx  
 ├── Server/         # Database files
+   ├── Server/      # Database files
+      ├── App.js    # Configures OpenAI, loads database, interprets text input
+      ├── Server.js # Creates and listens to the server
+   ├── morgan_edu_data.csv  
+   ├── morgan_edu_data.json  
+   ├── morgan_edu_data2.csv
+   ├── morgan_edu_texts.npy
+   ├── openAI.py    # Takes user input and returns 
+   ├── pyvenv.cfg
+   ├── scrapper.py
+   ├── terminal_voice_chatbot.py
+   ├── vectorDB.py
 ├── src/            # Source files
-├── tests/          # Test files
 └── README.md       # This file - Documentation
 ```
 
 ## Technologies Used
-- Language(s):
-- Framework(s):
-- Database:
-- Other tools:
+- Language(s): Python, HTML/CSS/Javascript
+- Framework(s): React
+- Database: Faiss datbase (Facebook AI Similarity Search)
+- Other tools: OpenAI
 
 ## Contributing
 1. Fork the project
