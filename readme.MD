@@ -29,11 +29,6 @@ from project import main
 main.run()
 ```
 
-## Features
-- Feature 1: Brief description
-- Feature 2: Brief description
-- Feature 3: Brief description
-
 ## Project Structure
 ```
 SP_MORGAN_CHATBOT/
